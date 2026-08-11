@@ -8,3 +8,4 @@ openai==1.75.0
 rank_bm25==0.2.2
 datasets==4.4.2
 jieba
+openai

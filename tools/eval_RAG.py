@@ -106,7 +106,7 @@ if __name__ == '__main__':
 
     subprocess.run(["rm", "-rf", "./chroma_db"], check=True)
 
-    data = MedicalDataset("/home/cai/project/bm25_embedding/data/val.jsonl")
+    data = MedicalDataset("./data/val.jsonl")
     pubmed = data.content[4000:]
     contexts = []
     for item in pubmed:

@@ -21,7 +21,7 @@ def main():
     )
 
     model = SentenceTransformer("models/bge-large-zh")
-    dataset = HFDataset("/home/cai/project/bm25_embedding/data/train.jsonl").load()
+    dataset = HFDataset("./data/train.jsonl").load()
     trainer = SentenceTransformerTrainer(
         model=model,
         args=training_args,

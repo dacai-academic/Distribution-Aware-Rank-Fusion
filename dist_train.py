@@ -23,7 +23,7 @@ def main():
     dist.init_process_group(backend="nccl")
     device = torch.device("cuda", local_rank)
 
-    train_data = MedicalDataset("/home/cai/project/bm25_embedding/data/train.jsonl")
+    train_data = MedicalDataset("./data/train.jsonl")
     train_sampler = torch.utils.data.distributed.DistributedSampler(train_data, shuffle=True)
     train_dataloader = torch.utils.data.DataLoader(train_data, batch_size=BATCH_SIZE, sampler=train_sampler, pin_memory=True, drop_last=True)
     model = FusionModel().to(device)

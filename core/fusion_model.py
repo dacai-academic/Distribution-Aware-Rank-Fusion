@@ -76,6 +76,7 @@ class FusionModel(nn.Module):
         return fused
 
     def encode(self, x):
+        # encode
         return self.forward(x).detach().cpu().numpy()
 
 
